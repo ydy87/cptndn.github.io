@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Captain's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Captain</div>
+        <ul class="nav-links">
+          <li><a href="#about">소개</a></li>
+          <li><a href="#projects">프로젝트</a></li>
+          <li><a href="#skills">기술 스택</a></li>
+          <li><a href="#awards">수상 경력</a></li>
+          <li><a href="#experience">경력</a></li>
+          <li><a href="#contact">연락처</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero" class="fade-in">
+      <div class="profile-picture">
+        <img src="image.png" alt="증명사진" />
+      </div>
+      <h1>안녕하세요, 캡틴입니다!</h1>
+      <p class="tagline">로봇과 세상을 연결하는 엔지니어</p>
+    </section>
+
+    <section id="about" class="fade-in">
+      <h2>소개</h2>
+      <p>
+        저는 로봇 기술과 소프트웨어 엔지니어링을 통해 세상을 더 나은 방향으로
+        이끄는 것을 목표로 하고 있습니다.
+      </p>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2>프로젝트</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>자가 균형 로봇</h3>
+          <p>PID 제어 및 ROS2를 이용하여 자가 균형을 유지하는 로봇 개발 (제어 알고리즘 담당)</p>
+          <a href="https://github.com/ydy87/self-balancing-robot" target="_blank">GitHub 보기</a>
+        </div>
+        <div class="project">
+          <h3>공정 모니터링 시스템</h3>
+          <p>센서 및 AI 영상 인식을 활용하여 위험 행동을 자동 감지하는 스마트 팩토리 프로젝트 (서버 및 통신 담당)</p>
+          <a href="https://github.com/ydy87/factory-monitoring-system" target="_blank">GitHub 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="fade-in">
+      <h2>기술 스택</h2>
+      <ul class="skills-list">
+        <li>ROS2: 로봇 통신 및 모듈 제어 개발</li>
+        <li>C/C++: 임베디드 제어 알고리즘 구현</li>
+        <li>RoboDK: 로봇 시뮬레이션 환경 구축 및 테스트</li>
+        <li>HTML/CSS/JS: 웹 기반 대시보드 개발</li>
+        <li>VUE: 프론트엔드 SPA(싱글 페이지 애플리케이션) 제작</li>
+      </ul>
+    </section>
+
+    <section id="awards" class="fade-in">
+      <h2>수상 경력</h2>
+      <ul>
+        <li>IT융합연구소 주관 한경국립대학교 EE globaltech 동상 수상</li>
+        <li>한경국립대학교 Bright Makers Expo(캡스톤디자인) 최우수상 수상</li>
+        <li>한이음 드림업 입선(한국정보산업연합회장상)</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="fade-in">
+      <h2>경력</h2>
+      <ul>
+        <li>2019.03 ~ 2025.02 한경대학교 ICT로봇기계공학부 (전공 심화)</li>
+        <li>2023.03 ~ 2024.12 로봇 연구실 Ubics (로봇 제어 및 SW개발)</li>
+        <li>2025.01 ~ Now 삼성 청년 SW 아카데미 (임베디드 로봇 트랙)</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>연락하기</h2>
+      <p>Email: toueg@naver.com</p>
+      <p>Phone number: 010-2319-3094</p>
+      <p>
+        GitHub:
+        <a href="https://github.com/ydy87" target="_blank">github.com/ydy87</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 Captain. All rights reserved.</p>
+    </footer>
+
+    <!-- 등장 애니메이션 스크립트 -->
+    <script>
+      const faders = document.querySelectorAll('.fade-in');
+
+      const appearOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    </script>
+  </body>
+</html>
