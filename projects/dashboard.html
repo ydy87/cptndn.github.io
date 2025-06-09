@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로봇 모니터링 대시보드 - 상세 정보</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-links {
+            margin-top: 1rem;
+        }
+
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        .github-link:hover {
+            background: #2f363d;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tech-item {
+            background: #111;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .features-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #fff;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>로봇 모니터링 대시보드</h1>
+            <div class="project-links">
+                <a href="https://github.com/ydy87/final-web-pjt" target="_blank" class="github-link">
+                    GitHub 저장소
+                </a>
+            </div>
+        </header>
+
+        <section class="project-overview">
+            <h2>프로젝트 개요</h2>
+            <p>
+                자가 균형 로봇의 상태 및 제어를 가능하게 하는 웹 기반 대시보드입니다. 
+                실시간 데이터 시각화와 원격 제어 기능을 제공하여 로봇의 상태를 모니터링하고 
+                제어할 수 있습니다.
+            </p>
+        </section>
+
+        <section class="project-tech">
+            <h2>사용 기술</h2>
+            <div class="tech-stack">
+                <span class="tech-item">Vue.js</span>
+                <span class="tech-item">WebSocket</span>
+                <span class="tech-item">Chart.js</span>
+                <span class="tech-item">Bootstrap</span>
+            </div>
+        </section>
+
+        <section class="project-features">
+            <h2>주요 기능</h2>
+            <ul class="features-list">
+                <li>실시간 센서 데이터 시각화</li>
+                <li>원격 제어 인터페이스</li>
+                <li>데이터 로깅 및 분석</li>
+                <li>반응형 웹 디자인</li>
+            </ul>
+        </section>
+
+        <section class="project-images">
+            <h2>프로젝트 스크린샷</h2>
+            <div class="image-gallery">
+                <img src="/projects/dashboard/main.jpg" alt="대시보드 메인 화면">
+                <img src="/projects/dashboard/control.jpg" alt="제어 인터페이스">
+                <img src="/projects/dashboard/charts.jpg" alt="데이터 차트">
+            </div>
+        </section>
+    </div>
+</body>
+</html> 

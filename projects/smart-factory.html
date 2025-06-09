@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트 팩토리 환경 구현 - 상세 정보</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-links {
+            margin-top: 1rem;
+        }
+
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        .github-link:hover {
+            background: #2f363d;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tech-item {
+            background: #111;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .features-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #fff;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>스마트 팩토리 환경 구현</h1>
+            <div class="project-links">
+                <a href="https://github.com/ydy87/ssafy-pjt" target="_blank" class="github-link">
+                    GitHub 저장소
+                </a>
+            </div>
+        </header>
+
+        <section class="project-overview">
+            <h2>프로젝트 개요</h2>
+            <p>
+                Dobot Magician과 gesture 인식을 이용한 스마트 팩토리 환경 구현 시뮬레이션 프로젝트입니다. 
+                AI 비전 시스템을 통한 제품 인식과 로봇 제어를 구현하여 자동화된 생산 라인을 시뮬레이션했습니다.
+            </p>
+        </section>
+
+        <section class="project-tech">
+            <h2>사용 기술</h2>
+            <div class="tech-stack">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">OpenCV</span>
+                <span class="tech-item">YOLO</span>
+                <span class="tech-item">Dobot SDK</span>
+            </div>
+        </section>
+
+        <section class="project-features">
+            <h2>주요 기능</h2>
+            <ul class="features-list">
+                <li>YOLO 기반 제품 인식</li>
+                <li>Gesture 인식 기반 제어</li>
+                <li>Dobot Magician 자동화 제어</li>
+                <li>실시간 비전 처리</li>
+            </ul>
+        </section>
+
+        <section class="project-images">
+            <h2>프로젝트 스크린샷</h2>
+            <div class="image-gallery">
+                <img src="/projects/smart-factory/main.jpg" alt="스마트 팩토리 메인 화면">
+                <img src="/projects/smart-factory/vision.jpg" alt="비전 시스템">
+                <img src="/projects/smart-factory/robot.jpg" alt="로봇 제어">
+            </div>
+        </section>
+    </div>
+</body>
+</html> 
